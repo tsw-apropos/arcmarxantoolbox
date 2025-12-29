@@ -157,5 +157,5 @@ This tool will create a comma separated file you can open in an spreadsheet prog
 
 ### How to Cite use of the arcmarxan Toolbox
 
-Trevor Wiens arcmarxan Toolbox, Version 2.0.3.
+Trevor Wiens ArcMarxan Toolbox, Version 2.0.3.
 
