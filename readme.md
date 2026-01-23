@@ -15,7 +15,7 @@ This document is not however a substitute for Marxan training. For information o
 
 ## Installation
 
-1. Download the ArcMarxan Toolbox ArcMarxan2.pyt provided here.
+1. Download the ArcMarxan Toolbox ArcMarxan2.pyt.
 2. Copy this file to your system in a location where it won't be altered. Paths you might consider would be, C:\Python27\ArcGIS10.2\Lib\site-packages\arcmarxan\esri\toolboxes or C:\Users\<your user account>\AppData\Roaming\ESRI\Desktop10.2\ArcToolbox\My Toolboxes
 3. Open ArcMap
 4. Open ArcToolbox
