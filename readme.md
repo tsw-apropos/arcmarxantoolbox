@@ -3,19 +3,19 @@
 
 [Marxan](https://marxansolutions.org/) is one of the leading conservation tools in the world. Marxan is designed as a decision support tool which asks the question, "How can I meet these targets efficiently?". Marxan uses spatial data in a non-spatial environment to test many different solutions to find near-optimal solutions to the before stated question. The ArcMarxan Toolbox is a free / open source python toolbox for ArcGIS 10.2 and above that makes creating input files for Marxan simple, quick and easy. This project was made possible with the assistance of the Newfoundland and Labrador office of the Department of Fisheries and Oceans Canada.
 
-As of 2025-12-19, this project will no longer be actively maintained or supported by the author; if you wish to update it to work with ArcGIS Pro or create a new version for that purpose, please feel free to fork the project and do so.
+On 2026-04-30 a new version was added that is compatible with ArcPro. Beyond this update this project is not actively maintained.
 
 ## Overview
 
-The ArcMarxan Toolbox is an ArcGIS plugin that provides a set of processing tools Marxan data preparation, export to Marxan, calibration and analysis of results. The current version is 2.0.2 and includes calibration tools and fixes a bug in feature export that was in 2.0.1. It is functionally identical the QMarxan 2.0.3 plugin for QGIS 3.x.
+The ArcMarxan Toolbox is an ArcGIS plugin that provides a set of processing tools Marxan data preparation, export to Marxan, calibration and analysis of results. The current version is 2.0.4 which adds support for ArcPro, add options when creating the Feature inputs and has improvements to the BLM Estimation algorithm. It is functionally identical the QMarxan 2.0.4 plugin for QGIS 3.x.
 
-ArcMarxan can be used with Marxan 2.4.3 or with the new Marxan version 4.0.5. Marxan can be downloaded for Windows, Linux and MacOS computers here.
+ArcMarxan can be used with Marxan 2.4.3 or with the new Marxan version 4.0.6. Marxan can be downloaded for Windows, Linux and MacOS computers here.
 
 This document is not however a substitute for Marxan training. For information on training see the Marxan Solutions website.
 
 ## Installation
 
-1. Download the ArcMarxan Toolbox ArcMarxan2.pyt.
+1. Download the ArcMarxan Toolbox ArcMarxan-2.0.4-arcgis.pyt or ArcMarxan-2.0.4-arcpro.pyt file depending your desktop GIS system.
 2. Copy this file to your system in a location where it won't be altered. Paths you might consider would be, C:\Python27\ArcGIS10.2\Lib\site-packages\arcmarxan\esri\toolboxes or C:\Users\<your user account>\AppData\Roaming\ESRI\Desktop10.2\ArcToolbox\My Toolboxes
 3. Open ArcMap
 4. Open ArcToolbox
@@ -86,6 +86,9 @@ Input values for this tool are:
  * Planning unit layer - The planning unit layer or table with all the calculated values for each feature is selected here. This might be a shape file or a table or a GeoPackage or spatial database layer. What is important is that all the calculated values are available in a single file and that it has a planning unit id field.
  * Planning unit id field - The name of the field with the planning unit id is selected here.
  * Feature fields - Select fields for inclusion as features in your project by marking the check box beside them
+ * Initial Type Targets - Select between setting initial targets based on Proportion, Target Values or Target Occurences for all species in the spec.dat file
+ * Initial Target Value - The value to be applied to the Initial Target Type column in the spec.dat file.
+ * Initial SPF Value - The initial SPF value for all species in the spec.dat file.
  * Marxan input folder - This folder is where the spec.dat, puvsp.dat and pusvsp_sporder.dat files will be written. The puvsp.data and pusvsp_sporder.dat describe how much of each feature exists in each planning unit. Although only the puvsp.dat file is required, creating both files speeds the initialization process for Marxan. These two files do not need to be edited after creation unless features are added, removed or recalculated. The spec.dat file will need to be altered after creation to set targets using the prop, target or targetocc fields. The prop field is a proportional target field with values ranging from 0 to 1. The target field is used to set targets in the units of the measured feature. The targetocc field allows users to set targets based on the number of occurrences of a feature. Please note that only one file can be used for each feature. Please refer to the Marxan user documentation for more details.
 
 ### Export Planning Unit File
