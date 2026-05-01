@@ -1,5 +1,5 @@
 # arcmarxantoolbox
-## Marxan Processing tools for ArcGIS 10.2 and above
+## Marxan Processing tools for ArcGIS 10.2 and above and ArcPro
 
 [Marxan](https://marxansolutions.org/) is one of the leading conservation tools in the world. Marxan is designed as a decision support tool which asks the question, "How can I meet these targets efficiently?". Marxan uses spatial data in a non-spatial environment to test many different solutions to find near-optimal solutions to the before stated question. The ArcMarxan Toolbox is a free / open source python toolbox for ArcGIS 10.2 and above that makes creating input files for Marxan simple, quick and easy. This project was made possible with the assistance of the Newfoundland and Labrador office of the Department of Fisheries and Oceans Canada.
 
